@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a crash, wrong output, or broken behavior
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag (e.g. v0.1.0) or commit SHA
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, terminal emulator, and Rust toolchain if built from source
+      placeholder: macOS 15, iTerm2, rustc 1.88.0
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Minimal steps including the model or input used (never attach weights)
+      placeholder: |
+        1. lobotomy ./my-model
+        2. select tensor ...
+        3. expected ... but saw ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste relevant terminal output or error messages
+      render: text

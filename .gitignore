@@ -1,0 +1,7 @@
+/target
+*.safetensors
+*-lobotomized/
+.DS_Store
+legacy/python/.venv
+legacy/python/build
+legacy/python/.pytest_cache
